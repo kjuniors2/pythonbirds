@@ -95,8 +95,13 @@ Exemplo:
 """
 
 class Motor:
+<<<<<<< HEAD
     def __init__(self):
         self.velocidade = 0
+=======
+    def __init__(self, velocidade=0):
+        self.velocidade = velocidade
+>>>>>>> origin/simples
 
     def acelerar(self):
         self.velocidade += 1
@@ -119,6 +124,10 @@ class Direcao:
         self.valor = self.posicao[posicao]
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/simples
     def girar_a_esquerda(self):
         posicao = (self.posicao.index(self.valor) - 1) % 4
         self.valor = self.posicao[posicao]
@@ -146,4 +155,8 @@ class Carro:
         return self.direcao.girar_a_direita()
 
     def girar_a_esquerda(self):
+<<<<<<< HEAD
         return self.direcao.girar_a_esquerda()
+=======
+        return self.direcao.girar_a_esquerda()
+>>>>>>> origin/simples
