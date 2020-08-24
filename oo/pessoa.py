@@ -18,8 +18,11 @@ class Pessoa:
     def cumprimentar(self):
         return f'Olá {id(self)}'
 
+class Homem(Pessoa):
+    pass
+
 if __name__ == '__main__':
-    joao = Pessoa(nome='Joao')
+    joao = Homem(nome='Joao')
     julio = Pessoa(joao, nome='Julio')
     print(julio.nome)
     print(joao.nome)
@@ -37,3 +40,9 @@ if __name__ == '__main__':
     print(id(Pessoa.olhos), id(julio.olhos), id(joao.olhos))
     print(Pessoa.metodoestatico(), julio.metodoestatico())
     print(Pessoa.classemetodo(), julio.classemetodo())
+    pessoa = Pessoa('Anonimo')
+    print(isinstance(pessoa, Homem))
+    print(isinstance(pessoa, Pessoa))
+    print(isinstance(joao, Homem))
+    print(isinstance(joao, Pessoa))
+
