@@ -16,14 +16,21 @@ class Pessoa:
 
 
     def cumprimentar(self):
-        return f'Olá {id(self)}'
+        return f'Olá meu nome é: {self.nome}'
 
 class Homem(Pessoa):
+    def cumprimentar(self):
+        cumprimentar_classe_pai = super().cumprimentar()
+        return f'{cumprimentar_classe_pai}. Aperto de Mão'
+
+class Mutante(Pessoa):
     pass
+
 
 if __name__ == '__main__':
     joao = Homem(nome='Joao')
     julio = Pessoa(joao, nome='Julio')
+    mutante = Mutante(nome='Kaka')
     print(julio.nome)
     print(joao.nome)
     print(julio.filhos)
@@ -40,9 +47,6 @@ if __name__ == '__main__':
     print(id(Pessoa.olhos), id(julio.olhos), id(joao.olhos))
     print(Pessoa.metodoestatico(), julio.metodoestatico())
     print(Pessoa.classemetodo(), julio.classemetodo())
-    pessoa = Pessoa('Anonimo')
-    print(isinstance(pessoa, Homem))
-    print(isinstance(pessoa, Pessoa))
-    print(isinstance(joao, Homem))
-    print(isinstance(joao, Pessoa))
+    print(joao.cumprimentar())
+    print(mutante.cumprimentar())
 
