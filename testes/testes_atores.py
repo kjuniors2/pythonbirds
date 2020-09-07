@@ -209,7 +209,7 @@ class PassaroVermelhoTests(PassaroBaseTests):
 
     def teste_foi_lancado(self):
         """
-        Teste de lançamento. Enquanto o método lançar do passaro não for chamado, o méotodo foi_lancado deve retornar
+        Teste de lançamento. Enquanto o método lançar do passaro não for chamado, o método foi_lancado deve retornar
         Falso
         :return:
         """
